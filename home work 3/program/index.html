@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const suhu = 5
+      const kondisi = ""
+
+      if (suhu > -100 && suhu < 0) {
+        kondisi = "Beku"
+      } else if (suhu > 1 && suhu < 100) {
+        kondisi = "Cair"
+      } else if (suhu > 101 && suhu < 500) {
+        kondisi = "Uap"
+      } else {
+        kondisi = "Tidak Terdefinisi"
+      }
+
+      console.log("No 1")
+      console.log("suhu air", suhu, "maka kondisi air", kondisi)
+
+      const plat = "kuning"
+      const jenisKendaraan = "motor"
+      const cc = 0
+      const bbm = ""
+
+      if (plat === "kuning" || jenisKendaraan === "motor") {
+        bbm = "Subsidi"
+      } else if (jenisKendaraan === "mobil" && cc < 1500) {
+        bbm = "Pertamax"
+      } else if (jenisKendaraan === "mobil" && cc >= 1500) {
+        bbm = "Pertamax Turbo "
+      }
+
+      console.log("No 2")
+      console.log("Jenis Kendaraan =", jenisKendaraan)
+      console.log("warna plat =", plat)
+      console.log("maka jenis bbmnya", bbm)
+    </script>
+  </body>
+</html>

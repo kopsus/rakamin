@@ -1,0 +1,27 @@
+version: "3"
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  uhuy:
+    build: .
+    networks:
+      - app-tier
+    ports:
+      - "3000:3000"
+    depends_on:
+      - psqldb
+    volumes:
+      - ./:/hw11/src/app
+  psqldb:
+    image: postgres:latest
+    ports:
+      - "5439:5439"
+    environment:
+      POSTGRES_USER: postgres # Ganti dengan nama pengguna PostgreSQL Anda
+      POSTGRES_PASSWORD: 301101 # Ganti dengan kata sandi PostgreSQL Anda
+      POSTGRES_DB: todo
+    networks:
+      - app-tier

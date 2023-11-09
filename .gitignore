@@ -1,0 +1,8 @@
+*.node_modules
+*.env
+link repo.txt
+*.sql
+*.pdf
+*.pptx
+*.docx
+*.txt
